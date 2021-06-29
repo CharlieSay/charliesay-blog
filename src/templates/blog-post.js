@@ -20,12 +20,14 @@ const BlogPostTemplate = ({ data, location }) => {
         className="blog-post"
         itemScope
         itemType="http://schema.org/Article"
+        style={{ maxWidth: "632px" }}
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
         <section
+          style={{ maxWidth: "632px" }}
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
